@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HelloWorld</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <!-- NAVBAR
+    ================================================== -->
+
+    <div class="navbar-wrapper" id="menu">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      
+
+
+        <div class="navbar ">
+
+
+
+          <div class="navbar-inner">           
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#">Jovens Programadores</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+
+              	<%= content_tag :li, :class => ('active' if action_name == 'index' && controller_name == 'welcome') do %>
+              		<%= link_to "Home", root_path  %>
+              	<% end %>
+
+              	<%= content_tag :li, :class => ('active' if action_name == 'about' && controller_name == 'welcome') do %>
+              		<a href="about">Sobre o Projeto</a>
+              	<% end %>
+				<%= content_tag :li, :class => ('active' if action_name == 'inscricoes' && controller_name == 'welcome') do %>
+					<a href="inscricoes">Inscrições</a>
+				<% end %>
+      
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div> 
+    </div>
+    
+      
+  
+<%= yield %>
+
+
+<div class="container-narrow">
+      <footer>
+        <p class="pull-right"><a href="#">Ir para o Topo</a></p>
+        <p>&copy; 2013 Designa &middot; </p>
+      </footer>
+
+    </div>
+</body>
+</html>
