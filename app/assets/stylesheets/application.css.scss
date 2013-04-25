@@ -8,7 +8,9 @@
 
 /* Padding below the footer and lighter body text */
 body {
-  margin-top: 60px;
+  @media (min-width: 980px) {
+    margin-top: 60px;
+  }
   padding-bottom: 40px;
   color: #5a5a5a;
 }
@@ -17,23 +19,6 @@ body {
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
-
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  margin-top: 20px;
-  margin-bottom: -90px;
-  width:100%;
-}
-
-.navbar-wrapper .navbar {
-
-}
-
 /* Remove border and change up box shadow for more contrast */
 .navbar .navbar-inner {
   border: 20;

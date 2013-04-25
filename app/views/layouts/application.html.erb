@@ -10,35 +10,37 @@
 </head>
 
 <body>
-  <div class="navbar-wrapper" id="menu">
+  <div class="navbar-wrapper navbar-fixed-top" id="menu">
     <div class="navbar ">
       <div class="navbar-inner">
-        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 
-        <a class="brand" href="/">Jovem Programador</a>
+          <a class="brand" href="/">Jovem Programador</a>
 
-        <div class="nav-collapse collapse">
-          <ul class="nav">
-            <%= content_tag :li, :class => ('active' if action_name == 'index' && controller_name == 'welcome') do %>
-              <%= link_to "Home", root_path  %>
-            <% end %>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <%= content_tag :li, :class => ('active' if action_name == 'index' && controller_name == 'welcome') do %>
+                <%= link_to "Home", root_path  %>
+              <% end %>
 
-            <!-- <%= content_tag :li, :class => ('active' if action_name == 'about' && controller_name == 'welcome') do %> -->
-              <!-- <a href="sobre">Sobre</a> -->
-            <!-- <% end %> -->
+              <!-- <%= content_tag :li, :class => ('active' if action_name == 'about' && controller_name == 'welcome') do %> -->
+                <!-- <a href="sobre">Sobre</a> -->
+              <!-- <% end %> -->
 
-            <%= content_tag :li, :class => ('active' if action_name == 'inscription' && controller_name == 'welcome') do %>
-             <a href="inscricoes">Inscrições</a>
-            <% end %>
+              <%= content_tag :li, :class => ('active' if action_name == 'inscription' && controller_name == 'welcome') do %>
+               <a href="inscricoes">Inscrições</a>
+              <% end %>
 
-            <%= content_tag :li, :class => ('active' if action_name == 'contact' && controller_name == 'welcome') do %>
-             <a href="contato">Contato</a>
-            <% end %>
-          </ul>
+              <%= content_tag :li, :class => ('active' if action_name == 'contact' && controller_name == 'welcome') do %>
+               <a href="contato">Contato</a>
+              <% end %>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

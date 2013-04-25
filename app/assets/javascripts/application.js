@@ -15,15 +15,3 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
-
-
-
-$(document).ready(function(){
-    var y_fixo = $("#menu").offset().top;
-    $(window).scroll(function () {
-        $("#menu").animate({
-            top: y_fixo+$(document).scrollTop()+"px"
-            },{duration:0,queue:false}
-        );
-    });
-});
