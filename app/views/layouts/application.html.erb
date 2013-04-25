@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <title>Jovem Programador - Designa</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -27,15 +28,15 @@
             <% end %>
 
             <%= content_tag :li, :class => ('active' if action_name == 'about' && controller_name == 'welcome') do %>
-              <a href="about">Sobre</a>
+              <a href="sobre">Sobre</a>
             <% end %>
 
-            <%= content_tag :li, :class => ('active' if action_name == 'inscricoes' && controller_name == 'welcome') do %>
+            <%= content_tag :li, :class => ('active' if action_name == 'inscription' && controller_name == 'welcome') do %>
              <a href="inscricoes">Inscrições</a>
             <% end %>
 
-            <%= content_tag :li, :class => ('active' if action_name == 'contato' && controller_name == 'welcome') do %>
-             <a href="inscricoes">Inscrições</a>
+            <%= content_tag :li, :class => ('active' if action_name == 'contact' && controller_name == 'welcome') do %>
+             <a href="contato">Contato</a>
             <% end %>
           </ul>
         </div>

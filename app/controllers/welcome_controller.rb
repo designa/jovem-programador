@@ -1,15 +1,15 @@
 class WelcomeController < ApplicationController
-  
+
   def index
-  
   end
-  
+
   def about
-
   end
 
-  def inscricoes
-
+  def inscription
   end
-  
+
+  def contact
+  end
+
 end
