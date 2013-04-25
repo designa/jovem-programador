@@ -9,6 +9,9 @@ class WelcomeController < ApplicationController
   def inscription
   end
 
+  def partners
+  end
+
   def contact
   end
 

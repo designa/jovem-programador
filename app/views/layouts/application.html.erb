@@ -36,6 +36,10 @@
                <a href="inscricoes">Inscrições</a>
               <% end %>
 
+              <%= content_tag :li, :class => ('active' if action_name == 'partners' && controller_name == 'welcome') do %>
+                <a href="parceiros">Parceiros</a>
+              <% end %>
+
               <%= content_tag :li, :class => ('active' if action_name == 'contact' && controller_name == 'welcome') do %>
                <a href="contato">Contato</a>
               <% end %>
