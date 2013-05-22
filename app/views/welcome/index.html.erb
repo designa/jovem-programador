@@ -6,19 +6,18 @@
       <%= image_tag "aprenda-com-todos.png" %>
       <h2>Aprenda com todos</h2>
       <p>Estimular a colaboração entre as pessoas para potencializar o aprendizado.</p>
-
     </div>
+
     <div class="span4">
       <%= image_tag "raciocinio-logico.png" %>
       <h2>Raciocínio lógico</h2>
       <p>É a chave para se tornar um bom programador! Independente da linguagem, treine sua lógica... isso facilitará o aprendizado de qualquer linguagem de programação.</p>
-
     </div>
+
     <div class="span4">
       <%= image_tag "conheca-as-ferramentas.png" %>
       <h2>Conheça as ferramentas </h2>
       <p>Ferramenta boa é aquela que você conhece e sabe usar! Nós vamos te ajudar conhecer ferramentas que aumentarão sua produtividade!</p>
-
     </div>
   </div>
 
@@ -53,5 +52,10 @@
     <p class="lead">Não basta querer, tem que se dedicar, tem que persistir! Atitude e muito treino!</p>
   </div>
 
-  <hr>
+  <hr class="featurette-divider">
+
+  <h2 class="featurette-heading">Este projeto é <span class="muted">mantido por</span>:</h2>
+  <%= link_to (image_tag "designa.png", class: "image-maintainer"), "http://www.designa.com.br", target: "blank" %>
+  <%= link_to (image_tag "imasters.png", class: "image-maintainer"), "http://www.imasters.com.br", target: "blank" %>
+
 </div>

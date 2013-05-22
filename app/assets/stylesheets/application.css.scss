@@ -15,6 +15,15 @@ body {
   color: #5a5a5a;
 }
 
+footer {
+  margin-top: 100px;
+}
+
+.image-maintainer {
+  margin-top: 30px;
+  margin-right: 50px;
+}
+
 
 
 /* CUSTOMIZE THE NAVBAR
@@ -130,6 +139,10 @@ body {
   margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
 }
 
+.featurette-image-mini {
+  margin-top: 40px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
 /* Give some space on the sides of the floated elements so text doesn't run right into it. */
 .featurette-image.pull-left {
   margin-right: 40px;
@@ -146,6 +159,12 @@ body {
   letter-spacing: -1px;
 }
 
+
+/* About
+------------------------- */
+.about {
+  padding-top: 120px;
+}
 
 
 /* RESPONSIVE CSS
@@ -174,11 +193,13 @@ body {
     padding: 0;
   }
   .featurette-image.pull-left,
-  .featurette-image.pull-right {
+  .featurette-image.pull-right,
+  .featurette-image-mini.pull-right,
+  .featurette-image-mini.pull-left,
+   {
     display: block;
     float: none;
-    max-width: 40%;
-    margin: 0 auto 20px;
+    margin: 50px auto 20px;
   }
 }
 
