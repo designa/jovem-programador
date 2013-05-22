@@ -1,9 +1,11 @@
-<div class="container-narrow">
- <div class="featurette" align="center">
-    <h2 class="featurette-heading">Seja um <span class="muted">parceiro</span></h2><br>
-    <p class="lead">
-      O projeto <strong>Jovem Programador</strong> é uma iniciativa da <%= link_to "Designa", "http://designa.com.br", :target => "_blank" %>, mas procuramos parceiros para potencializar esta iniciativa. <br>Se <strong>você</strong> pode nos ajudar de alguma forma,<br>deixe-nos saber:
+<div class="container featurette">
+  <h2 class="featurette-heading">Seja um <span class="muted">parceiro</span></h2>
+  <p class="lead">O projeto <strong>Jovem Programador</strong> é uma iniciativa da <%= link_to "Designa", "http://designa.com.br", :target => "_blank" %> e da <%= link_to "iMasters", "http://imasters.com.br", :target => "_blank" %> mas procuramos parceiros para potencializar este projeto. Se <strong>você</strong> pode nos ajudar de alguma forma, deixe-nos saber. Envie um e-mail para: <%= link_to "jovemprogramador@designa.com.br", "mailto:jovemprogramador@designa.com.br" %></p>
 
-      <h3><%= link_to "jovemprogramador@designa.com.br", "mailto:jovemprogramador@designa.com.br" %></h3>
-  </div>
+  <hr class="featurette-divider">
+
+  <%= render "maintainer" %>
 </div>
+
+
+
