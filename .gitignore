@@ -32,3 +32,4 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 >>>>>>> 981895517adf9f107a37fea25c8519880f84141b
+.DS_Store
