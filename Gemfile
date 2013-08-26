@@ -1,14 +1,27 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'sqlite3'
+gem "mysql2"
+gem "rails-i18n"
+gem "simple_form"
+gem "delocalize"
+gem "active_decorator"
+gem "paperclip", "~> 3.0"
+gem "ckeditor"
+gem 'bcrypt-ruby', '~> 3.0.0'
 
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
   gem "bootstrap-sass"
-  gem 'jquery-rails', '>= 1.0.12'
+  gem 'jquery-rails'
+  gem "select2-rails"
+end
+
+group :development do
+  gem "pry"
+  gem "awesome_print"
+  gem "clean_logger"
+  gem "thin"
 end

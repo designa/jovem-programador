@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row page-header">
+    <div class="span12">
+      <h1>Lista de Posts</h1>
+      <%= link_to "Novo Post", :blog_post_new, class: "btn flat btn-darkblue" %>
+      <%= link_to "Gerenciar Categorias", :blog_categories, class: "btn flat btn-darkblue" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <table class="table table-stripped table-condensed">
+        <thead>
+          <th> Titulo </th>
+          <th> Autor </th>
+          <th> Categorias </th>
+          <th> Postado em </th>
+          <th> Ações </th>
+        </thead>
+        <tbody>
+          <% @posts.each do |post| %>
+          <tr>
+            <td> <%= link_to(post.title, blog_post_path(post)) %> </td>
+            <td> <%= post.author %> </td>
+            <td> <%= post.show_categories %> </td>
+            <td> <%= l(post.created_at) %> </td>
+            <td> Editar/Exluir </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row page-header">
+    <div class="span12">
+      <h1>Lista de categorias</h1>
+      <%= link_to "Nova categoria", :blog_category_new, class: "btn flat btn-darkblue" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <table class="table table-stripped table-condensed">
+        <thead>
+          <th> Nome </th>
+          <th> Slug </th>
+          <th> Cor </th>
+          <th> Posts </th>
+          <th> Ações </th>
+        </thead>
+        <tbody>
+          <% @categories.each do |category| %>
+          <tr>
+            <td> <%= category.name %> </td>
+            <td> <%= category.slug %> </td>
+            <td> <strong style="color: <%= category.color %>"><%= category.color %></strong> </td>
+            <td> <%= category.posts.count %> </td>
+            <td> Editar/Exluir </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

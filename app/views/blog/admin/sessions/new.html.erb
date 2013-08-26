@@ -1,0 +1,8 @@
+<div class="login-box">
+<h2 class="lead">Jovem Programador</h2>
+  <%= simple_form_for :login, url: :blog_session_new do |f| %>
+    <%= f.input :username, label: false, placeholder: "Login" %>
+    <%= f.input :password, label: false, placeholder: "Senha" %>
+    <%= f.submit "Entrar", class: "btn btn-primary btn-block" %>
+  <% end %>
+</div>

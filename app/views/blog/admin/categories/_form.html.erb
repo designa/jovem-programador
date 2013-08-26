@@ -1,0 +1,6 @@
+<%= simple_form_for @category, url: url do |f| %>
+  <%= f.input :name, label: false , placeholder: "Nome" %>
+  <%= f.input :slug, label: false , placeholder: "Slug", hint: "Este será o nome que fará parta da url" %>
+  <%= f.input :color, label: false , placeholder: "Cor", hint: "Esta será a cor que identificará os marcadores desta categoria" %>
+  <%= f.submit "Criar categoria", class: "btn btn-darkblue flat" %>
+<% end %>

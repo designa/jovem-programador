@@ -1,0 +1,15 @@
+<div class="sidebar">
+  <div class="widget">
+    <h4>Últimos posts</h4>
+    <ul>
+      <% @posts.each do |post| %>
+        <li> <%= link_to post.title, blog_post_path(post) %> </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="widget">
+    <h4>About</h4>
+    <p>Nulla facilisi. Sed justo dui, id erat. Morbi auctor adipiscing tempor. Phasellus condimentum rutrum aliquet. Quisque eu consectetur erat. Proin rutrum, erat eget posuere semper, <em>arcu mauris posuere tortor</em>,velit at <a href="#">magna sollicitudin cursus</a> ac ultrices magna. Aliquam consequat, purus vitae auctor ullamcorper, sem velit convallis quam, a pharetra justo nunc et mauris. </p>
+  </div>
+</div>
+</div>
