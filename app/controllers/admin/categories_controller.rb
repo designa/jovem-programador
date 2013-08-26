@@ -1,5 +1,5 @@
-class Blog::Admin::CategoriesController < Blog::Admin::AdminController
-
+class Admin::CategoriesController < Admin::AdminController
+  before_filter :authenticated?
   def index
     @categories = PostCategory.all
   end
@@ -15,7 +15,7 @@ class Blog::Admin::CategoriesController < Blog::Admin::AdminController
     else
       flash[:alert] = "Por favor, verifique os error abaixo."
     end
-    respond_with @category, location: :blog_categories
+    respond_with @category, location: :admin_categories
   end
     
 end

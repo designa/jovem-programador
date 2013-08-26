@@ -1,5 +1,5 @@
-class Blog::Admin::PostsController < Blog::Admin::AdminController
-
+class Admin::PostsController < Admin::AdminController
+  before_filter :authenticated?
   def index
     @posts = Post.all
   end
@@ -46,7 +46,7 @@ class Blog::Admin::PostsController < Blog::Admin::AdminController
     if @post.destroy
       flash[:notice] = "Post deletado com sucesso."
     end
-    redirect_to :blog_posts
+    redirect_to :admin_posts
   end
 
 end

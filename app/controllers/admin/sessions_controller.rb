@@ -1,4 +1,4 @@
-class Blog::Admin::SessionsController < Blog::Admin::AdminController
+class Admin::SessionsController < Admin::AdminController
 
   def new
   end
@@ -6,7 +6,7 @@ class Blog::Admin::SessionsController < Blog::Admin::AdminController
   def create
     if params[:login][:username] == BLOG_USER && params[:login][:password] == BLOG_PASSWORD
       session[:user] = true
-      redirect_to :blog_posts
+      redirect_to :admin_posts
     else
       render :new
     end
