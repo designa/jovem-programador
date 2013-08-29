@@ -1,0 +1,433 @@
+@import "bootstrap"
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200")
+@import url("http://fonts.googleapis.com/css?family=Condiment")
+
+body
+  background: #ffffff
+  font-family: "Source Sans Pro", sans-serif
+
+
+.container
+  width: 1050px
+
+#top-block-bg, #bottom-block-bg
+  background: #4C4C4C
+
+#mainmenu-block-bg, #bottommenu-block-bg
+  background: #2F2F2F
+
+#logo
+  margin: 60px auto
+  padding: 0 20px
+  text-align: center
+  h1
+    margin-bottom: 0
+    a
+      color: #4D4D4D
+
+.logo-slogan!
+
+// navbar
+#mainmenu-block-bg
+  background: #2f2f2f
+
+#bottommenu-block-bg
+  background: #2f2f2f
+  margin-top: 45px
+
+#mainmenu-block-bg
+  z-index: 10
+  width: 100%
+
+.top-menu
+  display: inline-block
+  float: right
+  height: auto
+  padding-top: 5px
+
+.bottom-menu
+  display: inline-block
+  height: auto
+  padding: 25px 0 20px
+
+#menu
+  float: left
+  padding: 30px 0
+  font-family: 'Abel', sans-serif, Helvetica
+  text-transform: uppercase
+
+.bottom-menu .add-nav li a
+  font-family: 'Abel', sans-serif, Helvetica
+  text-transform: uppercase
+  font-size: 14px
+
+.add-nav li a
+  text-shadow: none
+  line-height: 18px
+  font-size: 11px
+  font-weight: normal
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+
+.top-menu .sf-menu.add-nav a
+  display: inline-block
+  padding: 0
+  color: #b4b4b4 !important
+  padding-right: 5px
+
+.bottom-menu .sf-menu.add-nav
+  a
+    display: inline-block
+    padding: 0
+  li
+    margin-right: 20px
+
+.sf-menu
+  &.add-nav li
+    margin-right: 5px
+    border: none
+    padding: 0
+    background: none !important
+    &:hover a
+      color: #FFF !important
+      cursor: pointer
+  li:last-child
+    margin-right: 0
+
+.top-menu .add-nav li::after
+  content: "\0020 \002F"
+  color: #b8b8b8
+
+.sf-menu.add-nav li:last-child::after
+  content: none
+
+li.current_page_item a, .current_page_item
+  color: #fff !important
+
+li
+  &.current-menu-parent, .current-menu-item
+    color: #fff !important
+
+.current-menu-item
+  color: #fff !important
+
+.navigation
+  select
+    display: none
+    width: 100%
+    padding: 5px 0
+    margin: 30px 0
+    border: 1px solid #E3E4E4
+    text-transform: uppercase
+    font: 10px / 16px Arial, Helvetica, sans-serif
+    color: #999
+  padding: 0
+
+.sf-menu
+  margin: 0
+  padding: 0
+  list-style: none
+  z-index: 9499
+  text-shadow: none
+  line-height: 1.0
+  cursor: pointer
+  ul
+    position: absolute
+    top: -999em
+    li ul li:first-child
+      border-top: none
+  li
+    &:hover
+      visibility: inherit
+      outline: 0
+    &.sfHover
+      outline: 0
+  > li
+    float: left
+    position: relative
+    margin-right: 41px
+  a
+    &:focus, &:hover, &:active
+      outline: 0
+  li
+    &:hover, &.sfHover
+  a
+    display: block
+    position: relative
+  li
+    &:hover ul, &.sfHover ul
+      left: 5px
+      top: 43px
+      z-index: 99
+
+ul.sf-menu li
+  &:hover li ul, &.sfHover li ul
+    top: -999em
+  li
+    &:hover ul, &.sfHover ul
+      left: 10em
+      top: 0
+    &:hover li ul, &.sfHover li ul
+      top: -999em
+    li
+      &:hover ul, &.sfHover ul
+        left: 10em
+        top: 0
+
+.colored-bg, .sf-menu ul > li:hover
+  background: #E64946
+
+
+.sf-menu
+  float: left
+  a
+    text-decoration: none
+    font-size: 22px
+    color: #e3e3e3
+    -webkit-transition: all 0.2s linear
+    -moz-transition: all 0.2s linear
+    -o-transition: all 0.2s linear
+    -transition: all 0.2s linear
+    &:visited
+      color: #e3e3e3
+      -webkit-transition: all 0.2s linear
+      -moz-transition: all 0.2s linear
+      -o-transition: all 0.2s linear
+      transition: all 0.2s linear
+  li
+    &:hover, &.sfHover
+      outline: 0
+      color: #FFF
+  a
+    &:focus, &:hover, &:active
+      outline: 0
+      color: #FFF
+
+.active a
+  outline: 0
+  color: #FFF
+
+.sf-sub-indicator
+  position: absolute
+  display: block
+  right: -12px
+  width: 11px
+  height: 11px
+  text-indent: -999em
+  overflow: hidden
+a > .sf-sub-indicator
+  bottom: 1px
+
+ul.sub-menu
+  z-index: 9999
+  ul.sub-menu
+    z-index: 9999
+    margin-left: 112px
+
+.sf-menu
+  ul
+    .sf-sub-indicator
+      top: 25px
+      right: 10px
+    li
+      ul
+        background: #2F2F2F
+        background: rgba(47, 47, 47, 0.9)
+      width: 230px
+      position: relative
+  > li > ul
+    background: #2F2F2F
+    background: rgba(47, 47, 47, 0.9)
+  li li a
+    padding: 15px 10px
+    font-size: 20px
+    text-transform: uppercase
+  ul > li:hover
+    background: #E64946
+  li
+    &:hover ul, &.sfHover ul
+      left: -1px
+      top: 48px
+    .sf-sub-indicator
+      width: 0px
+      height: 0px
+      border-style: solid
+      border-width: 0 0 8px 8px
+      border-color: transparent transparent #e64946 transparent
+      -webkit-transform: rotate(360deg)
+
+//Posts
+
+.main-content, .box, .sidebar
+
+  background: #FFF
+  padding: 20px
+
+// First Headline
+
+.first-headline
+  border-bottom: 4px solid #bada55
+  background: #ffffff
+
+  h1.title
+    word-break: break-word
+    font-size: 48px
+    line-height: 60px
+    padding: 40px 40px 0px 0px
+    text-align: right
+  img
+    opacity: 0.5
+    display: block
+    width: 100%
+  p
+    font-size: 18px
+    font-weight: 400
+    line-height: 25px
+  .date
+    margin-top: -50
+    font-size: 37px
+    background: #000
+    color: #fff
+    line-height: initial
+
+// Second Headline
+.second-headline
+  background: #ffffff
+  height: 200px
+  width: 100%
+  margin-bottom: 20px
+
+  h3
+    font-size: 25px
+    margin-top: 0
+    line-height: 30px
+    width: 50%
+    text-align: left
+
+  p
+    font-size: 15px
+    font-weight: 100
+    line-height: 25px
+    text-align: justify
+    padding-right: 20px
+
+  img
+    display: block
+    width: 200px
+    height: 200px
+
+// short Posts
+
+.short-post
+  .span4
+    margin: 0
+    margin-bottom: 20px
+    padding: 10px
+    height: 220px
+    overflow: hidden
+    &:hover
+      background: #efefef
+      cursor: default
+      border-bottom: 3px solid #27ae60
+  h3
+    font-size: 25px
+    margin-top: 0
+    line-height: 30px
+    text-align: left
+
+  p
+    font-size: 15px
+    font-weight: 100
+    line-height: 25px
+    text-align: justify
+
+
+//sidebar
+.sidebar
+  text-align: center
+.widget .box, .widget.box, .cr-blog .box, #entry-post, .ct-page.box
+  background: #FFF
+  padding: 20px
+
+// social widget
+
+#social-counter
+  list-style: none
+  margin: 0
+  li
+    float: left
+    text-align: center
+    margin-right: 24px
+    width: 60px
+    &:last-child
+      margin-right: 0
+    a
+      color: #2B2B2B
+  .fans
+    color: #B2B2B2
+    font-size: 11px
+    font-style: italic
+  .social
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 14px
+    font-weight: bold
+    -webkit-transition: color 0.2s linear
+    -moz-transition: color 0.2s linear
+    -o-transition: color 0.2s linear
+    -transition: color 0.2s linear
+  li:hover .social
+    color: #E64946
+  .c-icon
+    width: 48px
+    height: 48px
+    display: block
+    background-color: #E64946
+    margin: auto
+    margin-bottom: 10px
+
+.latest-title
+  font-size: 23.5px
+.latest-posts
+  background: #ffffff
+  -webkit-box-shadow: 2px 2px 0px rgba(50, 50, 50, 0.23)
+  -moz-box-shadow:    2px 2px 0px rgba(50, 50, 50, 0.23)
+  box-shadow:         2px 2px 0px rgba(50, 50, 50, 0.23)
+
+
+.recent-post
+  text-align: left
+  li
+    list-style: none
+
+.single-post
+  margin-left: 50px
+  margin-right: 20px
+  .post-content
+    width: 100%
+    padding-right: 25px
+  .header
+    position: relative
+    width: 100%
+    margin: 0
+    .title
+      position: absolute
+      top: 200px
+      left: 0
+      width: 100%
+    h2 span
+      color: white
+      font: bold 24px/45px Helvetica, Sans-Serif
+      background: rgb(0, 0, 0)
+      background: rgba(0, 0, 0, 0.7)
+      letter-spacing: -1px
+      padding: 10px
+    p
+      color: white
+      padding: 10px
+    img
+      width: 100%
+      height: 300px
+      padding: 0 -50px
+  p
+    text-align: justify
+    font-size: 20px
+    line-height: 30px

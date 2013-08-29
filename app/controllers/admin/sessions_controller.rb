@@ -1,20 +1,27 @@
 class Admin::SessionsController < Admin::AdminController
+  layout "login"
 
   def new
+    @users = User.all
   end
 
   def create
-    if params[:login][:username] == BLOG_USER && params[:login][:password] == BLOG_PASSWORD
-      session[:user] = true
-      redirect_to :admin_posts
+    user = params[:login][:email]
+    password = params[:login][:password]
+    @user = User.find_by_email_and_password(user,password)
+
+    if @user
+      session[:admin] = @user
+      flash[:notice] = "Welcome (:"
+      redirect_to :admin_root
     else
+      flash[:alert] = "Something goes wrong!"
       render :new
     end
   end
 
   def destroy
-    reset_sessions
+    reset_session
     redirect_to :root
   end
-    
 end

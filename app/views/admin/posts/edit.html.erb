@@ -1,12 +1,5 @@
-<div class="container">
-  <div class="row page-header">
-    <div class="span12">
-      <h1>Novo Post</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="span12">
-      <%= render "form", url: :admin_post_edit %>
-    </div>
-  </div>
+<div class="page-header">
+  <%= content_tag :h1, "Edit <small> #{@post.title} </small>".html_safe %>
+  <%= link_to "View in Blog", post_path(@post), target: "_blank" %>
 </div>
+<%= render 'form', path: :admin_edit_post %>

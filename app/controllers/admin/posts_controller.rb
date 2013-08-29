@@ -1,7 +1,8 @@
 class Admin::PostsController < Admin::AdminController
   before_filter :authenticated?
+
   def index
-    @posts = Post.all
+    @posts = Post.find_all_by_user_id(session[:admin].id).reverse
   end
 
   def new
@@ -11,30 +12,32 @@ class Admin::PostsController < Admin::AdminController
   def create
     @post = Post.new(params[:post])
     if @post.save
-      flash[:notice] = "Post gravado com sucesso!"
+      flash[:notice] = "Artigo salvo com sucesso!"
+      respond_with @post, location: :admin_posts
     else
-      flash[:alert] = "Por favor, verifique os erros abaixo."
+      flash[:alert] = "Ops!"
+      render :new
     end
-    respond_with @post, location: blog_post_path(@post)
   end
 
   def show
     @post = Post.find(params[:id])
   end
 
-  def edit
+def edit
     @post = Post.find(params[:id])
   end
 
   def update
     @post = Post.find(params[:id])
     @post.attributes = params[:post]
-     if @post.save
-      flash[:notice] = "Post atualizado com sucesso!"
+    if @post.save
+      flash[:notice] = "Post successfully updated!"
+      respond_with @post, location: :admin_posts
     else
-      flash[:alert] = "Por favor, verifique os erros abaixo."
+      flash[:alert] = "Something goes wrong!"
+      render :new
     end
-    respond_with @post, location: blog_post_path(@post)
   end
 
   def delete
@@ -42,11 +45,9 @@ class Admin::PostsController < Admin::AdminController
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    if @post.destroy
-      flash[:notice] = "Post deletado com sucesso."
-    end
-    redirect_to :admin_posts
+    Post.find(params[:id]).destroy
+    flash[:notice] = "Post was successfully removed"
+    redirect_to admin_posts_path
   end
 
 end

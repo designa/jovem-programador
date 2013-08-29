@@ -1,0 +1,15 @@
+<% if @headline  %>
+<div class="row-fluid">
+  <div class="span12 first-headline">
+    <h1 class="title"> <%= link_to (truncate(@headline.title, length: 47, omission: '...')),blog_post_path(@headline) %> </h1>
+    <div class="row-fluid">
+      <div class="span3">
+        <span class="date"> <%= @headline.created_at.to_formatted_s(:short) %></span>
+      </div>
+      <div class="span9">
+        <%= simple_format(truncate(@headline.full_text, length: 350, omission: '...')) %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

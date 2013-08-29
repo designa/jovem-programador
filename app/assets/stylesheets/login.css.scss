@@ -1,0 +1,30 @@
+body{
+  background-color: #efefef;
+}
+.container{
+     position:absolute;
+     width:400px;
+     height:400px;
+     z-index:15;
+     top:50%;
+     left:50%;
+     margin:-250px 0 0 -200px;
+     text-align:center;
+}
+h1{
+  margin-left:-90px;
+  color: #000;
+  font-size: 40px;
+  font-weight: 700;
+}
+h1 span {
+  color: #3498db;
+}
+.well{
+  text-align:center;
+  background-color:#fff;
+  padding-top:60px;
+  border: 1px solid #e5e5e5;
+  -webkit-box-shadow: rgba(200,200,200,0.7) 0 4px 10px -1px;
+  box-shadow: rgba(200,200,200,0.7) 0 4px 10px -1px;
+}

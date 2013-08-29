@@ -1,12 +1,4 @@
-<div class="container">
-  <div class="row page-header">
-    <div class="span12">
-      <h1>Novo Post</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="span12">
-      <%= render "form", url: :admin_post_new %>
-    </div>
-  </div>
+<div class="page-header">
+  <%= content_tag :h1, "New Post" %>
 </div>
+<%= render 'form', path: :admin_new_post %>

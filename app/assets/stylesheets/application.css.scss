@@ -3,7 +3,7 @@
 
 body {
   @media (min-width: 980px) {
-    margin-top: 60px;
+
   }
   padding-bottom: 40px;
   color: #5a5a5a;
@@ -238,8 +238,8 @@ footer {
 
 .video
 {
-	width:100%;
-	text-align:center;
+  width:100%;
+  text-align:center;
 }
 .container-narrow {
   margin: 0 auto;
@@ -247,7 +247,7 @@ footer {
 }
 
 #menu {
-	border-top: 10px solid #3a4282;
+  border-top: 10px solid #3a4282;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.8)), to(rgba(80,80,80,0.0)));
   background: -moz-linear-gradient(top, #ffffff, #ffffff);
   margin: 0 auto;

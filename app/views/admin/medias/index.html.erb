@@ -1,0 +1,17 @@
+<h1> Medias </h1>
+<table class="table">
+  <tr>
+      <%= content_tag :th, "Thumb" %>
+      <%= content_tag :th, "Name" %>
+      <%= content_tag :th, "Created at" %>
+      <%= content_tag :th, "Remove" %>
+  </tr>
+  <% @medias.each do |media| %>
+  <tr>
+      <%= content_tag :td, image_tag(media.data.url(:thumb))  %>
+      <%= content_tag :td, "Name" %>
+      <%= content_tag :td, "Created at" %>
+      <%= content_tag :td, "Remove" %>
+  </tr>
+  <% end %>
+</table>

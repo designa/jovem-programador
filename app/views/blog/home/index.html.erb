@@ -1,22 +1,10 @@
-<div class="row">
-
-  <div class="span8">
-    <div class="posts">
-
-      <% @posts.each do |post| %>
-      <div class="entry">
-        <h2><%= link_to post.title, blog_post_path(post)  %></h2>
-        <div class="meta">
-          <i class="icon-calendar"></i> <%= l(post.created_at) %> <i class="icon-user"></i> <%= post.author %> <i class="icon-folder-open"></i> <a href="#"><%= post.show_categories %></a> 
-        </div>
-        <%= simple_format(truncate(post.content, length: 500)) %>
-        <div class="button"><%= link_to "Leia mais", blog_post_path(post)  %></div>
-      </div>
-      <% end %>
-
-    </div>
-  </div>                        
-  <div class="span4">
-    <%= render "blog/shared/sidebar" %>
+<div class="container">
+  <div class="span9 main-content">
+    <%= render "blog/headline"%>
+    <h2> Leia Também </h2>
+    <%= render "blog/second_headline" %>
+    <h2> E muito mais </h2>
+    <%= render "blog/short_posts" %>
   </div>
+  
 </div>

@@ -1,25 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-  <title>Jovem Programador - Designa</title>
-  <meta charset="utf-8">
+  <title>..:: Designa Blog ::..</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <%= stylesheet_link_tag "blog", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "application","style","public", "blog", :media => "all",:"data-turbolinks-track" => "" %>
+  <%= javascript_include_tag "application", :"data-turbolinks-track" => "" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-  <%= render "blog/shared/header" %>
-  <%= render "blog/shared/navbar" %>
-  <div class="content blog">
-    <div class="container">
+<body <%= body_id_and_class %>>
+  <%= render 'layouts/header' %>
+  <%#= render 'home/jumbo' %>
+  <div class="row-fluid">
+    <div class="span8">
       <%= yield %>
     </div>
+    <div class="span4">
+      <%= render 'blog/shared/sidebar' %>
+    </div>
   </div>
-
-  <%#= render "blog/shared/social" %>
-  <%= render "blog/shared/footer" %>
+  <%= render 'layouts/footer' %>
 </body>
 </html>
-

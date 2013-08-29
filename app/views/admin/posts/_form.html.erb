@@ -1,12 +1,7 @@
-
-<div class="row">
-  <div class="span12">
-    <%= simple_form_for @post, :html => {:class => 'form-inline' },  url: url do |f| %>
-    <%= f.input :title, label: false , placeholder: "Titulo" %>
-    <%= f.input :content, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'basicstyles'} }, label: false %>
-    <%= f.input :author, label: false , placeholder: "Autor" %>
-    <%= f.association :post_categories, label: "Categorias", input_html: {class: "span12"} %>
-    <div class="form-actions"><%= f.submit "Publicar Texto", class: "btn btn-darkblue flat btn-block btn-large" %><%= link_to "Cancelar", :admin_posts %></div>
-    <% end %>
-  </div>
-</div>
+<%= simple_form_for @post, url: path do |f| %>
+  <%= f.input :title %>
+  <%= f.cktext_area :full_text %>
+  <%= f.association :categories, as: :check_boxes %>
+  <%= f.input :user_id, input_html: { value: current_user.id }, as: :hidden  %>
+  <%= f.submit class: "btn" %>
+<% end %>

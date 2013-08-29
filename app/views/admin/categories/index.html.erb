@@ -1,32 +1,27 @@
-<div class="container">
-  <div class="row page-header">
-    <div class="span12">
-      <h1>Lista de categorias</h1>
-      <%= link_to "Nova categoria", :admin_category_new, class: "btn flat btn-darkblue" %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="span12">
-      <table class="table table-stripped table-condensed">
-        <thead>
-          <th> Nome </th>
-          <th> Slug </th>
-          <th> Cor </th>
-          <th> Posts </th>
-          <th> Ações </th>
-        </thead>
-        <tbody>
-          <% @categories.each do |category| %>
-          <tr>
-            <td> <%= category.name %> </td>
-            <td> <%= category.slug %> </td>
-            <td> <strong style="color: <%= category.color %>"><%= category.color %></strong> </td>
-            <td> <%= category.posts.count %> </td>
-            <td> Editar/Exluir </td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
+<div class="page-header">
+  <%= content_tag :h1, "Categories" %>
+</div>
+<div class="row">
+  <div class="span10">
+    <%= link_to "New Category", :admin_new_category, class: "pull-right btn" %>
   </div>
 </div>
+
+<table class="table">
+  <tr>
+    <%= content_tag :th, "Category name" %>
+    <%= content_tag :th, "Description" %>
+    <%= content_tag :th, "Slug" %>
+    <%= content_tag :th, "Number of posts" %>
+    <%= content_tag :th, "Edit" %>
+  </tr>
+  <% @categories.each do |category| %>
+  <tr>
+    <%= content_tag :td, category.name %>
+    <%= content_tag :td, category.description %>
+    <%= content_tag :td, category.slug %>
+    <%= content_tag :td, category.posts.count %>
+    <%= content_tag :td, (link_to "Edit", admin_edit_category_path(category))  %>
+  </tr>
+  <% end %>
+</table>

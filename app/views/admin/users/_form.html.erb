@@ -1,0 +1,10 @@
+<%= simple_form_for @user, url: path do |f| %>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :facebook, placeholder: "Put user's facebook username only" %>
+  <%= f.input :twitter, placeholder: "Put user's twitter username only" %>
+  <%= f.input :password %>
+  <%= f.input :active, as: :radio ,item_wrap_class: "inline"%>
+  <%= f.submit class: "btn" %>
+<% end %>
+

@@ -1,0 +1,10 @@
+<div class="row-fluid short-post">
+  <% @posts.each do |post| %>
+    <div class="span4">
+      <h3> <%= truncate(post.title, length: 20, omission: '...') %>  </h3>
+      <small> por <%= post.user %></small>
+      <%= simple_format(truncate(post.full_text, length: 100, omission: '...')) %>
+      <%= post.show_categories %>
+    </div>
+  <% end %>
+</div>

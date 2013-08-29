@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130823120932) do
+ActiveRecord::Schema.define(:version => 20130704140122) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "slug"
+    t.string   "color"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "categories_posts", :id => false, :force => true do |t|
+    t.integer "post_id"
+    t.integer "category_id"
+  end
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -29,23 +43,22 @@ ActiveRecord::Schema.define(:version => 20130823120932) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
-  create_table "post_categories", :force => true do |t|
-    t.string   "name"
-    t.string   "slug"
-    t.string   "color"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "post_categories_posts", :id => false, :force => true do |t|
-    t.integer "post_id"
-    t.integer "post_category_id"
-  end
-
   create_table "posts", :force => true do |t|
     t.string   "title"
-    t.text     "content"
-    t.string   "author"
+    t.text     "description"
+    t.text     "full_text"
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "active"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

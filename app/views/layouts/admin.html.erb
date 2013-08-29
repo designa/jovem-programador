@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>..:: Admin - Designa Blog ::..</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag "application","admin", :media => "all",:"data-turbolinks-track" => "" %>
+  <%= javascript_include_tag "application", :"data-turbolinks-track" => "" %>
+  <%= csrf_meta_tags %>
+</head>
+<body <%= body_id_and_class %>>
+  <%= render 'admin/shared/header' %>
+  <%= render 'admin/shared/sidebar' %>
+  <div id="content" class="container-fluid">
+    <%= yield %>
+  </div>
+</body>
+</html>
