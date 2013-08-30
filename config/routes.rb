@@ -11,7 +11,8 @@ HelloWorld::Application.routes.draw do
 
   namespace :blog do
     root to: "home#index"
-    get "/post/:id", to: "posts#show", as: :post    
+    get "/post/:id", to: "posts#show", as: :post
+    get "/author/:id", to: "users#show", as: :user
   end
 
   namespace :admin do

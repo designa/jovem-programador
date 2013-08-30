@@ -51,9 +51,9 @@
                 <a href="parceiros">Parceiros</a>
               <% end %>
 
-              <%#= content_tag :li, :class => ('active' if action_name == 'partners' && controller_name == 'welcome') do %>
-                <%#= link_to "Blog", :blog_root %>
-              <%# end %>
+              <%= content_tag :li, :class => ('active' if action_name == 'partners' && controller_name == 'welcome') do %>
+                <%= link_to "Blog", :blog_root %>
+              <% end %>
   
 
               <%= content_tag :li, :class => ('active' if action_name == 'contact' && controller_name == 'welcome') do %>

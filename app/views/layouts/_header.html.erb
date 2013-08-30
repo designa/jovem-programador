@@ -8,9 +8,7 @@
       </div>
       <div class="span8">
         <ul class="nav nav-pills pull-right">
-          <%= content_tag :li, (link_to "Home", :root), class: is_active?(:root) %>
-          <%= content_tag :li, (link_to "About", :about),class: is_active?(:about) %>
-          <%= content_tag :li, (link_to "Contact", nil) %>
+          <%= content_tag :li, (link_to "Home", :blog_root), class: is_active?(:blog_root) %>
           <%= content_tag :li, (link_to "Admin", :admin_root) %>
         </ul>
       </div>

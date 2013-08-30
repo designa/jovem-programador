@@ -1,9 +1,8 @@
 <div class="container">
   <div class="span9 main-content">
+  <%= content_tag :h4, ("We've found #{pluralize(@category.posts.count, 'post')} in category <font color='#{@category.color}'><u>#{@category}</u></font>".html_safe) if params[:slug] %>
     <%= render "blog/headline"%>
-    <h2> Leia Também </h2>
     <%= render "blog/second_headline" %>
-    <h2> E muito mais </h2>
     <%= render "blog/short_posts" %>
   </div>
   

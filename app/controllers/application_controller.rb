@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   protected
   def load_sidebar_content
    @categories = Category.all
-   @latest_posts = Post.order("created_at DESC")
+   @latest_posts = Post.order("created_at DESC").limit(3)
  end
 
 end

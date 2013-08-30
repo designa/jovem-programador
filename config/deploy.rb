@@ -26,7 +26,7 @@ ssh_options[:forward_agent] = true
 #---------------------------------------
 after 'deploy:update_code' do
   deploy.symlink
-  deploy.migrate
+  deploy.db.reset
 end
 
 

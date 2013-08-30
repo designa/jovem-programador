@@ -1649,6 +1649,10 @@ ul.recent li h6 {
 	margin:0 0 10px 0;
 }
 
+ul.recent li p {
+  font-weight: 200
+}
+
 ul.recent li h6 a{
 	color:#353535;
 	font-size:16px;

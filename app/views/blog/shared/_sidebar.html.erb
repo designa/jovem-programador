@@ -9,21 +9,21 @@
   </div>
 
   <div class="widget">
-    <h5 class="widgetheading">Últimos posts</h5>
+    <h3 class="widgetheading"> Últimos posts </h3>
     <ul class="recent">
       <% @latest_posts.each do |post| %>
       <li>
-        <img src="http://iweb-studio.com/wrapbootstrap/flattern/img/dummies/blog/65x65/thumb1.jpg" class="pull-left" alt="" />
+        <!-- <img src="http://iweb-studio.com/wrapbootstrap/flattern/img/dummies/blog/65x65/thumb1.jpg" class="pull-left" alt="" /> -->
         <h6><%= link_to post.title, blog_post_path(post) %></h6>
         <p>
-          <%= simple_format(truncate post.full_text, length: 80) %>
+          <%= simple_format(truncate post.full_text, length: 70) %>
         </p>
       </li>
       <% end %>
     </ul>
   </div>
   <div class="widget">
-    <h5 class="widgetheading">Categorias</h5>
+    <h3 class="widgetheading">Categorias</h3>
     <ul class="cat">
       <% @categories.each do |category| %>
       <%= content_tag :li do %>
@@ -37,10 +37,10 @@
   <div class="widget">
 
     <%= content_tag :h5, "Parceiros", class: "widgetheading" %>
-    <%= link_to (image_tag "http://www.golivery.com.br/assets/logo-f85e8bdd6046c499b653ebf3d5d76396.png", size: "200x200"), "http://golivery.com.br", target: "_blank" %>
+    <%= link_to (image_tag "imasters.png", size: "200x200"), "http://golivery.com.br", target: "_blank" %>
 
     <%= content_tag :h5, "Desenvolvido por", class: "widgetheading" %>
-    <%= link_to (image_tag "http://jovemprogramador.com/assets/designa-0ccf2466f8e84c010b2fc76b05685b3b.png", size: "100x100"), "http://designa.com.br", target: "_blank" %>
+    <%= link_to (image_tag "designa.png", size: "100x100"), "http://designa.com.br", target: "_blank" %>
 
   </div>
 </aside>
