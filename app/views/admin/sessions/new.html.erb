@@ -12,16 +12,3 @@
     <%= link_to "← Back to DesignaBlog!", :root %>
   </div>
 </div>
-
-<table class="table">
-  <tr>
-    <td>Usuário</td>
-    <td>Senha</td>
-  </tr>
-    <% User.all.each do |user| %>
-    <tr>
-      <td><%= user.email %></td>
-      <td><%= user.password %></td>
-    </tr>
-    <% end %>
-</table>
