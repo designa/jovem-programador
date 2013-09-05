@@ -1,16 +1,10 @@
 <aside class="visible-desktop">
-    <!-- search -->
-    <form class="form-search">
-        <div class="input-prepend">
-            <!-- <input type="text" class="search-query"> -->
-        </div>
-    </form>
 
     <!-- menu -->
     <ul class="sideMenu">
         <%= content_tag :li, (link_to "Dashboard", :admin_root), class: is_active?(:admin_root) %>
         <%= content_tag :li, (link_to "Users", :admin_users), class: is_active?(:admin_users) if admin? %>
-        <%= content_tag :li, (link_to "Medias", :admin_medias), class: is_active?(:admin_medias) %>
+        <%#= content_tag :li, (link_to "Medias", :admin_medias), class: is_active?(:admin_medias) %>
         <%= content_tag :li, (link_to "Categories", :admin_categories), class: is_active?(:admin_categories) if admin? %>
         <%= content_tag :li, (link_to "Posts", :admin_posts), class: is_active?(:admin_posts, "admin/posts") %>
     </ul>

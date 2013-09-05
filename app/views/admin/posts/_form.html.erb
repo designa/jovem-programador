@@ -1,5 +1,6 @@
-<%= simple_form_for @post, url: path do |f| %>
+<%= simple_form_for @post, url: path, :html => { :multipart => true } do |f| %>
   <%= f.input :title %>
+  <%= f.input :image %>
   <%= f.cktext_area :full_text %>
   <%= f.association :categories, as: :check_boxes %>
   <%= f.input :user_id, input_html: { value: current_user.id }, as: :hidden  %>

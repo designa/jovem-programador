@@ -26,7 +26,7 @@ ssh_options[:forward_agent] = true
 #---------------------------------------
 after 'deploy:update_code' do
   deploy.symlink
-  deploy.db.reset
+  
 end
 
 
@@ -60,6 +60,14 @@ namespace :deploy do
   end
 
   namespace :db do
+    task :create do
+      run "cd #{current_path} && RAILS_ENV=production bundle exec rake db:create"
+    end
+
+    task :seed do
+      run "cd #{current_path} && RAILS_ENV=production bundle exec rake db:seed"
+    end
+
     task :reset do
       run "cd #{current_path} && RAILS_ENV=production bundle exec rake db:drop"
       run "cd #{current_path} && RAILS_ENV=production bundle exec rake db:create"

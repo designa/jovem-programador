@@ -26,7 +26,7 @@ module ApplicationHelper
   def show_post_categories(post)
     html = ""
     post.categories.each do |category|
-      html << " #{content_tag :span, (link_to category.name, root_path(slug: category.slug)), class: 'label'}"
+      html << " #{content_tag :span, (link_to category.name, blog_root_path(slug: category.slug)), class: 'label'}"
     end
     html.html_safe
   end

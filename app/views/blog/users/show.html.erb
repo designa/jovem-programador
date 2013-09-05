@@ -1,0 +1,22 @@
+<div class="single-post">
+  <div class="page-header">
+    <h2>
+      <%= @author.name %>
+    </h2>
+  </div>
+  <% @author.posts.reverse.each do |post| %>
+    <div class="row-fluid">
+      <h1 class="title"> <%= link_to (truncate(post.title, length: 47, omission: '...')),blog_post_path(post) %> </h1>
+    </div>
+    <div class="row-fluid">
+
+      <div class="span3">
+        <%= image_tag post.image.url(:square) %>
+      </div>
+      <div class="span9">
+        <%= simple_format(truncate(post.full_text, length: 350, omission: '...')) %>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+</div>

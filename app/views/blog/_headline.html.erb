@@ -3,15 +3,12 @@
   <div class="span12 first-headline">
     <h1 class="title"> <%= link_to (truncate(@headline.title, length: 47, omission: '...')),blog_post_path(@headline) %> </h1>
     <div class="row-fluid">
-      <div class="span12 headline-image"> 
-        <%= image_tag "startup_flag.jpg" %>
+      <div class="span12"> 
+        <%= image_tag @headline.image.url(:headline) %>
       </div>
     </div>
     <div class="row-fluid">
-      <div class="span3">
-        <span class="date"> <%= @headline.created_at.to_formatted_s(:short) %></span>
-      </div>
-      <div class="span9">
+      <div class="span12">
         <%= simple_format(truncate(@headline.full_text, length: 350, omission: '...')) %>
       </div>
     </div>

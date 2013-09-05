@@ -1,19 +1,18 @@
 <div class="page-header">
   <h2>
     <%= @post.title %>
-    <small>by  <%= link_to @post.user.name, user_path(@post.user) %></small>
+    <small>by  <%= link_to @post.user.name, admin_user_path(@post.user) %></small>
   </h2>
     <i class="icon-comment"></i>
-     <fb:comments-count href='<%= post_url(@post)%>'></fb:comments-count>
+     <fb:comments-count href='<%= admin_post_url(@post)%>'></fb:comments-count>
       <%= link_to ("Comments"), "#comments".html_safe %> |
   <%= show_post_categories(@post) %>
 </div>
-<p>
+<%= image_tag @post.image.url(:headline) %>
 <%= simple_format(@post.full_text) %>
-</p>
 <div class="page-header">
   <h2>
     <%= content_tag :a, "Comments", id: "comments" %>
   </h2>
 </div>
-<div class="fb-comments" data-href="<%= post_url(@post) %>" data-width="770" data-num-posts="10"></div>
+<div class="fb-comments" data-href="<%= admin_post_url(@post) %>" data-width="770" data-num-posts="10"></div>
